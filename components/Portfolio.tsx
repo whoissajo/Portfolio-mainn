@@ -11,6 +11,7 @@ import { Arrow, Icon, Lnk, Scramble, Stat, SecHead, Heading, usePanelAnim } from
 import DitherPortrait from "./DitherPortrait";
 import DotField from "./DotField";
 import PixelImage from "./PixelImage";
+import PortfolioWebMCP from "./PortfolioWebMCP";
 
 // Temporarily hide these sections; set a flag to true to show it again.
 const SHOW_MORE_WAYS_I_BUILD = false;
@@ -655,6 +656,7 @@ export default function Portfolio() {
           <Contact />
         </main>
         <Footer />
+        <PortfolioWebMCP />
         <MotionToggle off={motionOff} toggle={() => setMotionOff((m) => !m)} />
       </div>
     </MotionOffContext.Provider>
