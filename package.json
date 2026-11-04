@@ -15,7 +15,8 @@
     "lenis": "^1.3.27",
     "next": "^15.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "use-webmcp-tool": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
