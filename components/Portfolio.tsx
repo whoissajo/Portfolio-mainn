@@ -5,11 +5,13 @@ import {
   site, nav, hero, stats, statsCta, about, work, process as processData, impact,
   content, speaking, journey, contact,
 } from "@/content";
-import { MotionOffContext } from "./MotionContext";
+import { MotionOffContext, useMotionOff } from "./MotionContext";
 import { useMotion } from "./useMotion";
 import { Arrow, Icon, Lnk, Scramble, Stat, SecHead, Heading, usePanelAnim } from "./ui";
 import DitherPortrait from "./DitherPortrait";
 import DotField from "./DotField";
+import CrystalizedBall from "./CrystalizedBall.jsx";
+import DitherVeil from "./DitherVeil.jsx";
 import PixelImage from "./PixelImage";
 import PortfolioWebMCP from "./PortfolioWebMCP";
 
@@ -191,6 +193,7 @@ function Stats() {
 }
 
 function About() {
+  const motionOff = useMotionOff();
   const [tab, setTab] = useState(0);
   const panel = usePanelAnim(tab);
   const t = about.tabs[tab];
@@ -202,7 +205,23 @@ function About() {
           <div className="about-left">
             <div className="about-meta mono mute"><span>{about.intro}</span><span>0{tab + 1} / 0{about.tabs.length}</span></div>
             <div className="field-wrap" data-reveal>
-              <DotField mode={t.mode as "structure" | "ripples" | "connect"} />
+              {tab === 0 ? (
+                <div className="structure-visual" role="img" aria-label="Interactive plasma crystal representing structure">
+                  <CrystalizedBall
+                    preset="plasma"
+                    color="#94a3b8"
+                    size={0.7}
+                    crackle={0.85}
+                    fill={0.5}
+                    interactive={!motionOff}
+                    hoverStrength={0.7}
+                    paused={motionOff}
+                    intro={!motionOff}
+                  />
+                </div>
+              ) : (
+                <DotField mode={t.mode as "structure" | "ripples" | "connect"} />
+              )}
               <span className="field-cap mono mute">{t.caption.toUpperCase()}</span>
             </div>
             <div className="tabs3" role="tablist" aria-label="Perspective" data-reveal>
@@ -350,6 +369,7 @@ function Process() {
 }
 
 function Impact() {
+  const motionOff = useMotionOff();
   const [tab, setTab] = useState(0);
   const panel = usePanelAnim(tab);
   const t = impact.travels.tabs[tab];
@@ -421,9 +441,23 @@ function Impact() {
                 <p className="mono mute tiny">Choose a perspective.</p>
               </div>
             </div>
-            <div className="field-wrap ripple-box">
-              <DotField mode="ripples" />
-              <span className="field-cap mono mute">RIPPLES</span>
+            <div className="field-wrap dither-box">
+              <div className="dither-visual" role="img" aria-label="Dithered photograph revealed in full colour by pointer movement">
+                <DitherVeil
+                  src="https://images.unsplash.com/photo-1737071371043-761e02b1ef95?q=80&w=1400&auto=format&fit=crop"
+                  pattern="noise"
+                  pixelSize={2}
+                  inkColor="#120f17"
+                  paperColor="#94a3b8"
+                  revealRadius={105}
+                  softness={0.85}
+                  linger={1}
+                  rimColor="#94a3b8"
+                  contrast={1.25}
+                  paused={motionOff}
+                />
+              </div>
+              <span className="field-cap mono mute">DITHER VEIL</span>
             </div>
           </div>
         </div>
