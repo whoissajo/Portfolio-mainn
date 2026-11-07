@@ -803,6 +803,39 @@ void main() {
 }
 `;
 
+/**
+ * All CrystalizedBall controls are optional. Values not supplied by a caller
+ * fall back to the selected preset inside the component.
+ *
+ * @typedef {Object} CrystalizedBallProps
+ * @property {string} [preset]
+ * @property {string} [color]
+ * @property {string} [theme]
+ * @property {number} [size]
+ * @property {number} [strands]
+ * @property {number} [crackle]
+ * @property {number} [flares]
+ * @property {number} [glow]
+ * @property {number} [sparks]
+ * @property {number} [particleCount]
+ * @property {number} [fill]
+ * @property {string} [motion]
+ * @property {string} [particleShape]
+ * @property {number} [depth]
+ * @property {number} [sway]
+ * @property {number} [twinkle]
+ * @property {number} [haze]
+ * @property {number} [speed]
+ * @property {number} [dustSpeed]
+ * @property {boolean} [interactive]
+ * @property {number} [hoverStrength]
+ * @property {boolean} [intro]
+ * @property {boolean} [paused]
+ * @property {string} [className]
+ * @property {import('react').CSSProperties} [style]
+ */
+
+/** @param {CrystalizedBallProps} props */
 const CrystalizedBall = ({
   preset = 'plasma',
   color,
