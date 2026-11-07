@@ -197,6 +197,14 @@ html.motion-off .dot { animation: none; }
 .field-wrap { position: relative; width: 100%; margin: 28px auto 22px; }
 .dotfield { width: 100%; height: 100%; aspect-ratio: 1 / 1.02; max-height: 440px; margin: 0 auto; }
 .about-left .dotfield { width: min(400px, 78%); }
+.structure-visual {
+  position: relative;
+  width: min(400px, 78%);
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.structure-visual .crystalized-ball { width: 100%; height: 100%; }
 .field-cap { display: block; text-align: center; font-size: 9.5px; letter-spacing: 0.3em; margin-top: 18px; }
 .tabs3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 28px 0 28px; }
 .tab3 { display: flex; justify-content: space-between; align-items: center; gap: 12px; height: 46px; padding: 0 16px; border: 1px solid var(--line-2); font-size: 14px; color: #d8d3ca; transition: background 0.4s var(--ease), color 0.3s, border-color 0.3s; }
@@ -307,9 +315,19 @@ html.motion-off .dot { animation: none; }
 .travels-top { display: flex; justify-content: space-between; margin-bottom: 26px; }
 .travels-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
 .travels .tabs3 { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 460px; margin-top: 0; }
-.ripple-box { margin: 0; }
-.ripple-box .dotfield { aspect-ratio: 1 / 1; max-height: 330px; width: min(330px, 100%); }
-@media (max-width: 900px) { .travels-grid { grid-template-columns: 1fr; } }
+.dither-box { margin: 0; }
+.dither-visual {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.dither-visual .dither-veil { width: 100%; height: 100%; }
+@media (max-width: 900px) {
+  .travels-grid { grid-template-columns: 1fr; }
+  .structure-visual { height: clamp(360px, 105vw, 520px); }
+  .dither-visual { height: clamp(360px, 105vw, 520px); }
+}
 
 .platform { display: grid; grid-template-columns: 1fr 1.2fr 1.2fr; gap: 40px; align-items: start; padding: 64px 0 24px; margin-top: 56px; border-top: 1px solid var(--line); }
 .platform .side-text { margin-top: 14px; }
