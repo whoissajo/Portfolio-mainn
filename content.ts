@@ -80,12 +80,12 @@ export const work = {
   blurb: ["From a first sketch to a live product.", "A few things I've helped bring to life."],
   // TODO: replace with your real projects. `image` is optional.
   featured: [
-    { n: "01", cat: "Product & engineering", title: "Project One", text: "One or two sentences on what it is, who it is for and the problem it solves.", link: "Explore the story", href: "#", url: "projectone.com", caption: "Product & web experience", hue: 18, image: "" },
-    { n: "02", cat: "Design & frontend", title: "Project Two", text: "One or two sentences on what it is, who it is for and the problem it solves.", link: "Explore the story", href: "#", url: "projecttwo.app", caption: "Design system & UI", hue: 250, image: "" },
+    { n: "01", cat: "E-commerce · Technology", title: "Tech Store", text: "An online technology storefront that brings electronics and accessories into a clean, easy-to-explore shopping experience.", link: "View live project", href: "https://tech-store-zeta-ten.vercel.app/", url: "tech-store-zeta-ten.vercel.app", caption: "Technology storefront", hue: 195, image: "" },
+    { n: "02", cat: "E-commerce · Beauty", title: "Resore Beauty", text: "A beauty storefront with a polished product presentation and a simple, approachable browsing experience.", link: "View live project", href: "https://resore-beauty.vercel.app/", url: "resore-beauty.vercel.app", caption: "Beauty storefront", hue: 330, image: "" },
   ],
   pair: [
-    { n: "03", cat: "Web development", title: "Project Three", text: "A short description of this project and your role in it.", link: "Explore the story", href: "#", url: "projectthree.dev", caption: "Website", hue: 160, image: "" },
-    { n: "04", cat: "Experiment", title: "Project Four", text: "A short description of this project and your role in it.", link: "Explore the story", href: "#", url: "projectfour.xyz", caption: "Frontend experiment", hue: 320, image: "" },
+    { n: "03", cat: "Automotive · Web experience", title: "Car Alpha", text: "An automotive showcase that puts vehicle imagery and key details at the center of a straightforward browsing experience.", link: "View live project", href: "https://car-alpha-mauve.vercel.app/", url: "car-alpha-mauve.vercel.app", caption: "Automotive showcase", hue: 25, image: "" },
+    { n: "04", cat: "Frontend · Web experience", title: "Vite Black", text: "A standalone web experience built around a distinctive visual direction, responsive layouts, and a clear interface.", link: "View live project", href: "https://vite-black-gamma.vercel.app/", url: "vite-black-gamma.vercel.app", caption: "Frontend experience", hue: 265, image: "" },
   ],
   moreLabel: "More ways I build",
   more: [
