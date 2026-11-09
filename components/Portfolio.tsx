@@ -28,13 +28,15 @@ const visibleNav = nav.filter((n) =>
 /* ================= small pieces ================= */
 
 /** Browser-window mockup. Shows `image` if given, otherwise a generated wireframe. */
-function Mock({ url, hue, image, caption }: { url: string; hue: number; image?: string; caption: string }) {
+function Mock({ url, href, hue, image, caption }: { url: string; href: string; hue: number; image?: string; caption: string }) {
   return (
     <div className="mock spot" style={{ "--h": hue } as CSSProperties} data-reveal>
       <div className="mock-bar">
         <span className="mock-dots" aria-hidden><i /><i /><i /></span>
         <span className="mock-url mono">{url}</span>
-        <Arrow size={9} />
+        <a className="mock-bar-arrow" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${caption} in a new tab`}>
+          <Arrow size={9} />
+        </a>
       </div>
       <div className="mock-screen">
         {image ? (
@@ -52,7 +54,15 @@ function Mock({ url, hue, image, caption }: { url: string; hue: number; image?: 
             <div className="wire-cards"><i /><i /><i /></div>
           </div>
         )}
-        <span className="mock-go" aria-hidden><Arrow size={14} /></span>
+        <a
+          className="mock-go"
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${caption} live project in a new tab`}
+        >
+          <Arrow size={14} />
+        </a>
       </div>
       <span className="mock-cap mono">{caption}</span>
     </div>
@@ -254,14 +264,14 @@ function About() {
 function ProjectRow({ p }: { p: (typeof work.featured)[number] }) {
   return (
     <article className="proj">
-      <Mock url={p.url} hue={p.hue} image={p.image} caption={p.caption} />
+      <Mock url={p.url} href={p.href} hue={p.hue} image={p.image} caption={p.caption} />
       <div className="proj-text">
         <span className="mono mute proj-n" data-reveal>{p.n}</span>
         <div>
           <p className="mono mute" data-reveal>{p.cat}</p>
           <h3 className="serif proj-title" data-reveal>{p.title}</h3>
           <p className="soft" data-reveal>{p.text}</p>
-          <div data-reveal><Lnk href={p.href}>{p.link}</Lnk></div>
+          <div data-reveal><Lnk href={p.href} external>{p.link}</Lnk></div>
         </div>
       </div>
     </article>
@@ -282,11 +292,11 @@ function Work() {
         <div className="pair">
           {work.pair.map((p) => (
             <article className="pair-item" key={p.n}>
-              <Mock url={p.url} hue={p.hue} image={p.image} caption={p.caption} />
+              <Mock url={p.url} href={p.href} hue={p.hue} image={p.image} caption={p.caption} />
               <p className="mono mute pair-cat" data-reveal><span>{p.n}</span> {p.cat}</p>
               <h3 className="serif proj-title sm" data-reveal>{p.title}</h3>
               <p className="soft" data-reveal>{p.text}</p>
-              <div data-reveal><Lnk href={p.href}>{p.link}</Lnk></div>
+              <div data-reveal><Lnk href={p.href} external>{p.link}</Lnk></div>
             </article>
           ))}
         </div>
