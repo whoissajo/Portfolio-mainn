@@ -190,7 +190,7 @@ function ProjectRow({ p }: { p: (typeof work.featured)[number] }) {
           <p className="mono mute" data-reveal>{p.cat}</p>
           <h3 className="serif proj-title" data-reveal>{p.title}</h3>
           <p className="soft" data-reveal>{p.text}</p>
-          <div data-reveal><Lnk href={p.href}>{p.link}</Lnk></div>
+          <div data-reveal><Lnk href={p.href} external>{p.link}</Lnk></div>
         </div>
       </div>
     </article>
@@ -215,7 +215,7 @@ function Work() {
               <p className="mono mute pair-cat" data-reveal><span>{p.n}</span> {p.cat}</p>
               <h3 className="serif proj-title sm" data-reveal>{p.title}</h3>
               <p className="soft" data-reveal>{p.text}</p>
-              <div data-reveal><Lnk href={p.href}>{p.link}</Lnk></div>
+              <div data-reveal><Lnk href={p.href} external>{p.link}</Lnk></div>
             </article>
           ))}
         </div>
