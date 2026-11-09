@@ -25,10 +25,10 @@ function Mock({ url, href, hue, image, caption }: { url: string; href: string; h
           <Arrow size={9} />
         </a>
       </div>
-      <div className="mock-screen">
+      <a className="mock-screen mock-screen-link" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${caption} live project in a new tab`}>
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={image} alt={caption} loading="lazy" decoding="async" />
+          <img src={image} alt="" loading="lazy" decoding="async" />
         ) : (
           <div className="wire" aria-hidden>
             <div className="wire-nav"><i /><i /><i /><b /></div>
@@ -41,10 +41,10 @@ function Mock({ url, href, hue, image, caption }: { url: string; href: string; h
             <div className="wire-cards"><i /><i /><i /></div>
           </div>
         )}
-        <a className="mock-go" href={href} target="_blank" rel="noopener noreferrer" aria-label={`View ${caption} live in a new tab`}>
+        <span className="mock-go" aria-hidden="true">
           <Arrow size={14} />
-        </a>
-      </div>
+        </span>
+      </a>
       <span className="mock-cap mono">{caption}</span>
     </div>
   );
