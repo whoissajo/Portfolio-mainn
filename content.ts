@@ -85,7 +85,7 @@ export const work = {
   ],
   pair: [
     { n: "03", cat: "Automotive · Web experience", title: "Car Alpha", text: "An automotive showcase that puts vehicle imagery and key details at the center of a straightforward browsing experience.", link: "View live project", href: "https://car-alpha-mauve.vercel.app/", url: "car-alpha-mauve.vercel.app", caption: "Automotive showcase", hue: 25, image: "/images/car-alpha-mauve.vercel.app-2026-11-10-0110.avif" },
-    { n: "04", cat: "Frontend · Web experience", title: "Vite Black", text: "A standalone web experience built around a distinctive visual direction, responsive layouts, and a clear interface.", link: "View live project", href: "https://vite-black-gamma.vercel.app/", url: "vite-black-gamma.vercel.app", caption: "Frontend experience", hue: 265, image: "/images/vite-black.avif" },
+    { n: "04", cat: "Frontend · Web experience", title: "Offkit", text: "Explore the Offkit web experience on its live deployment.", link: "View live project", href: "https://offkit.vercel.app/", url: "offkit.vercel.app", caption: "Offkit web experience", hue: 265 },
   ],
   moreLabel: "More ways I build",
   more: [
